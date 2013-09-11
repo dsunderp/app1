@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  skills: MyString
+  user_id: 1
+  expire_by: 2013-09-11 11:24:31
+  start_date: 2013-09-11 11:24:31
+  duration: 2013-09-11 11:24:31
+  report_time: 2013-09-11 11:24:31
+  maximum_bid: 9.99
+
+two:
+  title: MyString
+  description: MyString
+  skills: MyString
+  user_id: 1
+  expire_by: 2013-09-11 11:24:31
+  start_date: 2013-09-11 11:24:31
+  duration: 2013-09-11 11:24:31
+  report_time: 2013-09-11 11:24:31
+  maximum_bid: 9.99
