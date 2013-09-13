@@ -1,5 +1,8 @@
 <% provide(:title, 'Home') %>
-<h1>LinkMe</h1>
-<p>
-Welcome to LinkMe!
-</p>
+<div class="center hero-unit">
+  <h2>Welcome to LinkMe</h2>
+  <p><%= link_to image_tag("Img1.png", alt: "blah"), '#' %></p>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+
