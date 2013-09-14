@@ -4,7 +4,14 @@
       <%= link_to "LinkMe", '#', id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Sign in", '#' %></li>
+
+          <% if signed_in? %>
+              <li><%= link_to current_user.username, current_user %></li>
+              <li><%= link_to "Posts", posts_path %></li>
+              <li><%= link_to "Sign out", signout_path %></li>
+              <% else %>
+              <li><%= link_to "Sign in", signin_path %></li>
+              <% end %>
         </ul>
       </nav>
     </div>
