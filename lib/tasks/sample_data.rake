@@ -6,7 +6,8 @@ namespace :db do
                  profile_type: "individual",
                  skills: "Ruby, C#" ,
                  password: "deepti1991",
-                 password_confirmation: "deepti1991")
+                 password_confirmation: "deepti1991",
+                admin: true)
     99.times do |n|
       name  = Faker::Name.name
       username = "ExUser-#{n+1}"
