@@ -1,27 +1,34 @@
 == README
+This project has been developed on ruby - 1.9.3-p392 and rails 4.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Deploy project on rails server and go to http://localhost:3000/
 
-Things you may want to cover:
+Sign Up
+-Click on the Sign up now button
+-Fill the form up and click "Save changes"
+-Profile created. Can be viewed and edited.
 
-* Ruby version
+Sign In
+-From http://localhost:3000/ click on "Sign in" on the top right corner
+-Fill in username and password and click on "Sign in"
 
-* System dependencies
+Posts
+-Once signed in, click on posts link on the nav bar
+-Create: click on "create post", fill out details and post
+-Delete: If you have logged in as admin, delete button will be visible beside the post
+-View: click on post title to view details of post
+-Bid: View post and click on bid to bid for the post
 
-* Configuration
+Users
+-View: You can view users by clicking on the user button in the nav bar.
+-Delete: If you login as admin you can see the link to delete users viewing the index of users
 
-* Database creation
+Profile
+-View: click on your username link on the nav bar to view your profile
+-Edit: You can click on the edit button on the profile view page to edit your profile
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Sign out
+-Click on the sign out button on the top nav bar to sign out.
 
 
 Please feel free to use a different markup language if you do not plan to run

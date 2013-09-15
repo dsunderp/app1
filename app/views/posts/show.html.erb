@@ -1,49 +1,23 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, @post.title) %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for User.find(@post.user_id) %>
+        <%= @post.title  %>
+      </h1>
+      <p>by<%= link_to User.find(@post.user_id).name, User.find(@post.user_id)%></p>
+      <p><b>Description: </b><%= @post.description%></p>
+      <p><b>Skills required: </b><%= @post.skills%></p>
+      <p><b>Start Date: </b><%= @post.start_date.strftime("%B %e, %Y")%></p>
+      <p><b>Report time: </b><%= @post.report_time.strftime("%I:%M %p")%></p>
+      <p><b>Duration: </b><%= @post.duration.strftime("%d days %H hours %M minutes")%></p>
+      <p><b>Maximum bid: </b><%= @post.maximum_bid%></p>
+    </section>
+  </aside>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<p>
-  <strong>Skills:</strong>
-  <%= @post.skills %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
-
-<p>
-  <strong>Expire by:</strong>
-  <%= @post.expire_by %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @post.start_date %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @post.duration %>
-</p>
-
-<p>
-  <strong>Report time:</strong>
-  <%= @post.report_time %>
-</p>
-
-<p>
-  <strong>Maximum bid:</strong>
-  <%= @post.maximum_bid %>
-</p>
-
+<%= render 'bid_form'%>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

@@ -1,0 +1,11 @@
+    <div id="bid_form">
+      <% if current_user.bid?(@post) %>
+
+         <%= render 'unbid'%>
+      <% else %>
+         <%= render 'bid'%>
+
+
+      <% end %>
+
+    </div>

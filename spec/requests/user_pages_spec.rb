@@ -8,7 +8,7 @@ describe "User pages" do
 
     before { visit signup_path }
 
-    let(:submit) { "Create my account" }
+    let(:submit) { "Save changes" }
 
     describe "with invalid information" do
       it "should not create a user" do
@@ -18,10 +18,12 @@ describe "User pages" do
 
     describe "with valid information" do
       before do
-        fill_in "Name",         with: "Example User"
-        fill_in "Email",        with: "user@example.com"
+        fill_in "Username",         with: "ExUser"
         fill_in "Password",     with: "foobar"
         fill_in "Confirmation", with: "foobar"
+        fill_in "Name",     with: "Example"
+        fill_in "Profile type", with: "individual"
+        fill_in "Skills",     with: "a,b,c"
       end
 
       it "should create a user" do
@@ -29,15 +31,6 @@ describe "User pages" do
       end
     end
 
-    it { should have_content('Sign up') }
-    it { should have_title(full_title('Sign up')) }
-  end
-end
-describe "profile page" do
-  # Replace with code to make a user variable
-  let(:user) { FactoryGirl.create(:user) }
-  before { visit user_path(user) }
 
-  it { should have_content(user.name) }
-  it { should have_title(user.name) }
+  end
 end
