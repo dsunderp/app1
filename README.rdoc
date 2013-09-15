@@ -1,5 +1,5 @@
 == README
-This project has been developed on ruby - 1.9.3-p392 and rails 4.0.0
+This project was developed on ruby-1.9.3-p392 and rails 4.0.0
 
 Deploy project on rails server and go to http://localhost:3000/
 
