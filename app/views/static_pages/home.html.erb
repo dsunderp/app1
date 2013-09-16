@@ -2,7 +2,9 @@
 <div class="center hero-unit">
   <h2>Welcome to LinkMe</h2>
   <p><%= link_to image_tag("Img1.png", alt: "blah"), '#' %></p>
+  <% if !signed_in?%>
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+      <%end%>
 </div>
 
 

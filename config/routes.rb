@@ -7,7 +7,16 @@ App1::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   resources :posts
  resources :sessions, only: [:new, :create, :destroy]
-  resources :users
+ resources :microposts, only: [:create, :destroy]
+ resources :bids,only:[:create, :destroy]
+ resources :users do
+   member do
+     get :bids
+   end
+ end
+ namespace :api do
+   resources :users, :defaults => { :format => 'xml' }
+ end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

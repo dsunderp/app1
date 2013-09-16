@@ -1,0 +1,4 @@
+<%= form_for(current_user.bids.find_by(post_id: @post),
+             html: { method: :delete },remote: true) do |f| %>
+<%= f.submit "Unbid", class: "btn" %>
+<% end %>

@@ -1,0 +1,17 @@
+Sun, 15 Sep 2013 18:55:37 -0400
+README.rdoc	Sun, 15 Sep 2013 18:55:12 -0400
+app/controllers/Api/users_controller.rb	Sun, 15 Sep 2013 17:59:09 -0400
+app/controllers/application_controller.rb	Fri, 13 Sep 2013 22:05:32 -0400
+app/controllers/bids_controller.rb	Sun, 15 Sep 2013 10:41:31 -0400
+app/controllers/posts_controller.rb	Sat, 14 Sep 2013 17:34:44 -0400
+app/controllers/sessions_controller.rb	Sat, 14 Sep 2013 15:54:43 -0400
+app/controllers/static_pages_controller.rb	Thu, 12 Sep 2013 21:31:48 -0400
+app/controllers/users_controller.rb	Sat, 14 Sep 2013 15:54:01 -0400
+app/helpers/application_helper.rb	Wed, 11 Sep 2013 13:39:59 -0400
+app/helpers/posts_helper.rb	Wed, 11 Sep 2013 11:24:31 -0400
+app/helpers/sessions_helper.rb	Sat, 14 Sep 2013 15:54:01 -0400
+app/helpers/static_pages_helper.rb	Wed, 11 Sep 2013 13:25:11 -0400
+app/helpers/users_helper.rb	Sun, 15 Sep 2013 07:17:53 -0400
+app/models/bid.rb	Sun, 15 Sep 2013 07:52:39 -0400
+app/models/post.rb	Sun, 15 Sep 2013 07:55:05 -0400
+app/models/user.rb	Sun, 15 Sep 2013 08:56:31 -0400
