@@ -1,28 +1,113 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was developed on ruby-1.9.3-p392 and rails 4.0.0
 
-Things you may want to cover:
+Deploy project on rails server and go to http://localhost:3000/
 
-* Ruby version
+Sign Up
 
-* System dependencies
+-Click on the Sign up now button
 
-* Configuration
+-Fill the form up and click "Save changes"
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-Profile created. Can be viewed and edited.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Sign In
+
+-From http://localhost:3000/ click on "Sign in" on the top right corner
+
+-Fill in username and password and click on "Sign in"
+
+
+Posts
+
+-Once signed in, click on posts link on the nav bar
+
+-Create: click on "create post", fill out details and post
+
+-Delete: If you have logged in as admin, delete button will be visible beside the post
+
+-View: click on post title to view details of post
+
+-Bid: View post and click on bid to bid for the post
+
+Users
+
+-View: You can view users by clicking on the user button in the nav bar.
+
+-Delete: If you login as admin you can see the link to delete users viewing the index of users
+
+
+Profile
+
+-View: click on your username link on the nav bar to view your profile
+
+-Edit: You can click on the edit button on the profile view page to edit your profile
+
+Sign out
+
+-Click on the sign out button on the top nav bar to sign out.
+
+API USAGE
+___________________________________________________________________
+
+Basic Authentication:
+    username: myJobs
+    password: myJobs
+
+Content Type :
+   application/xml
+
+Body:
+   You can pass xml in Body
+   
+ Sample xml body (for creation)
+ <?xml version="1.0" encoding="UTF-8"?>
+<user>
+<username>Joe42</username>
+<profile_type>individual</profile_type>
+<name>Joe</name>
+<skills>a,b,c</skills>
+</user>
+
+Note: default password set as “abcdefg”
+
+Sample xml body (for update)
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+<username>Joe42</username>
+<password>abcdef</password>
+<password_confirmation>abcdef<password_confirmation>
+<profile_type>individual</profile_type>
+<name>Joe Black</name>
+<skills>a,b,c</skills>
+</user>
+
+API Requests:
+
+=> listing users
+   url: http://localhost:3000/api/users
+   method: GET
+   body : not needed
+
+=> Retrieving User detail
+  url: http://localhost:3000/api/users/:id 
+  method: GET
+  body : not needed
+
+=> creating users
+   url: http://localhost:3000/api/users
+   method: Post
+   Body : xml required 
+
+=> Updating User
+  url: http://localhost:3000/api/users/:id 
+  method: PUT
+  Body : xml required
+  
+=> Deleting User 
+  url: http://localhost:3000/api/users/:id 
+  method: DELETE
+  body : not needed
+
