@@ -19,6 +19,8 @@ Sign In
 
 -Fill in username and password and click on "Sign in"
 
+<<<<<<< HEAD
+=======
 
 Posts
 
@@ -48,66 +50,33 @@ Profile
 Sign out
 
 -Click on the sign out button on the top nav bar to sign out.
+>>>>>>> 5eb4cb80d3bef249bdcc31fb0f30dda4cc88bb98
 
-API USAGE
-___________________________________________________________________
+Posts
 
-Basic Authentication:
-    username: myJobs
-    password: myJobs
+-Once signed in, click on posts link on the nav bar
 
-Content Type :
-   application/xml
+-Create: click on "create post", fill out details and post
 
-Body:
-   You can pass xml in Body
-   
- Sample xml body (for creation)
- <?xml version="1.0" encoding="UTF-8"?>
-<user>
-<username>Joe42</username>
-<profile_type>individual</profile_type>
-<name>Joe</name>
-<skills>a,b,c</skills>
-</user>
+-Delete: If you have logged in as admin, delete button will be visible beside the post
 
-Note: default password set as “abcdefg”
+-View: click on post title to view details of post
 
-Sample xml body (for update)
-<?xml version="1.0" encoding="UTF-8"?>
-<user>
-<username>Joe42</username>
-<password>abcdef</password>
-<password_confirmation>abcdef<password_confirmation>
-<profile_type>individual</profile_type>
-<name>Joe Black</name>
-<skills>a,b,c</skills>
-</user>
+-Bid: View post and click on bid to bid for the post
 
-API Requests:
+Users
 
-=> listing users
-   url: http://localhost:3000/api/users
-   method: GET
-   body : not needed
+-View: You can view users by clicking on the user button in the nav bar.
 
-=> Retrieving User detail
-  url: http://localhost:3000/api/users/:id 
-  method: GET
-  body : not needed
+-Delete: If you login as admin you can see the link to delete users viewing the index of users
 
-=> creating users
-   url: http://localhost:3000/api/users
-   method: Post
-   Body : xml required 
 
-=> Updating User
-  url: http://localhost:3000/api/users/:id 
-  method: PUT
-  Body : xml required
-  
-=> Deleting User 
-  url: http://localhost:3000/api/users/:id 
-  method: DELETE
-  body : not needed
+Profile
 
+-View: click on your username link on the nav bar to view your profile
+
+-Edit: You can click on the edit button on the profile view page to edit your profile
+
+Sign out
+
+-Click on the sign out button on the top nav bar to sign out.

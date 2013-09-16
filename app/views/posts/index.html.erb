@@ -1,43 +1,16 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Skills</th>
-      <th>User</th>
-      <th>Expire by</th>
-      <th>Start date</th>
-      <th>Duration</th>
-      <th>Report time</th>
-      <th>Maximum bid</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
-        <td><%= post.skills %></td>
-        <td><%= post.user_id %></td>
-        <td><%= post.expire_by %></td>
-        <td><%= post.start_date %></td>
-        <td><%= post.duration %></td>
-        <td><%= post.report_time %></td>
-        <td><%= post.maximum_bid %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<% provide(:title, 'Posts') %>
+<h1>Posts</h1>
+<%= link_to "Create Post", new_post_path%>
+<ul class="users">
+  <% @posts.each do |post| %>
+      <li>
+        <%= gravatar_for User.find(post.user_id) %>
+        <%= link_to post.title, post %>
+        <% if current_user.admin? && !current_user?(User.find(post.user_id)) %>
+            | <%= link_to "delete", User.find(post.user_id), method: :delete,
+                          data: { confirm: "You sure?" } %>
+        <% end %> <br></br>
+        by <%= User.find(post.user_id).name %>
+      </li>
+  <% end %>
+</ul>
